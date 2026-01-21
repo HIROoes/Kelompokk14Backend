@@ -1,0 +1,278 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header & Navigasi */
+header {
+  background: #0066cc;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #0066cc;
+    padding: 10px;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Tombol */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0066cc;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn:hover {
+  background: #004c99;
+}
+.welcome-container {
+  display: flex;              
+  justify-content: center;    
+  align-items: center;        
+  height: 100px;              
+  text-align: center;         
+  margin: 20px 0;
+}
+
+.welcome-container h2 {
+  color: #0066cc;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* Grid produk */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  align-items: stretch;
+  text-align: center;
+
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start; /* rata kiri */
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  color: #0066cc;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+.product-card img {
+  width: 100%;
+  height: 180px;          /* tinggi seragam */
+  object-fit: cover;      /* crop gambar biar proporsional */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-card .price {
+  margin-top: auto; /* selalu di bawah */
+  font-weight: bold;
+  color: #e63946;
+}
+
+/* Detail Produk */
+.detail-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.detail-container img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.detail-container h2 {
+  margin-bottom: 10px;
+  color: #0066cc;
+}
+
+.detail-container p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.detail-container .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e63946;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #0066cc;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.back-link:hover {
+  background: #004c99;
+}
+
+/* Form umum (login/register/add product) */
+.card {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0066cc;
+}
+
+.card label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card input[type="text"],
+.card input[type="number"],
+.card input[type="file"],
+.card textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.card input:focus,
+.card textarea:focus {
+  border-color: #0066cc;
+  outline: none;
+}
+
+.card button {
+  width: 100%;
+  padding: 12px;
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.card button:hover {
+  background: #004c99;
+}
+
+/* Profil */
+.profile-container h2 {
+  text-align: center;
+  color: #0066cc;
+  margin-bottom: 20px;
+}
+.profile-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.profile-card p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #0066cc;
+  color: #fff;
+  margin-top: 30px;
+}
